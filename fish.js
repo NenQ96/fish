@@ -54,48 +54,35 @@ function drawMainCanvas() {
   text("MESSAGES", 730, 70);
 
   // Learn Button
-  fill(238, 238, 238);
-  ellipse(150, 300, 100, 100);
-  ellipse(180, 330, 60, 60);
-  fill(56, 79, 92);
-  textSize(16);
-  text("LEARN", 150, 300);
+  textSize(200);
+  text("🐡", 150, 300);
+  textSize(40);
+  text("LEARN", 140, 300);
 
   // Progress Button
-  fill(19, 79, 92);
-  for (let angle = 0; angle < 360; angle += 90) {
-    let x = 400 + 60 * cos(radians(angle));
-    let y = 300 + 60 * sin(radians(angle));
-    ellipse(x, y, 40, 70);
-  }
-  fill(150, 75, 0);
-  ellipse(400, 300, 80, 80);
-  fill(255);
+  textSize(300);
+  text("🐢", 400, 280);
+  textSize(40);
   text("PROGRESS", 400, 300);
 
   // Rewards Button
-  fill(238, 182, 182);
-  beginShape();
-  for (let i = 0; i < 5; i++) {
-    let angle = radians(i * 144);
-    let x = 650 + 50 * cos(angle);
-    let y = 300 + 50 * sin(angle);
-    vertex(x, y);
-  }
-  endShape(CLOSE);
-  fill(56, 79, 92);
-  text("REWARDS", 650, 300);
+  textSize(200);
+  text("🐋", 660, 300);
+  textSize(40);
+  text("REWARDS", 640, 300);
 
   // Settings Button
   fill(19, 79, 92);
   rect(10, 500, 120, 40, 5);
   fill(255, 255, 255);
+  textSize(40);
   text("SETTINGS", 70, 520);
 
   // Change Theme Button
   fill(19, 79, 92);
   rect(650, 500, 120, 40, 5);
   fill(255, 255, 255);
+  textSize(40);
   text("CHANGE THEME", 710, 520);
 }
 
