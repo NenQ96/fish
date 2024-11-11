@@ -1,6 +1,3 @@
-let currentCanvas = 'main';
-let inputBox, enterButton;
-
 function setup() {
   createCanvas(800, 600);
   textFont('Times New Roman');
@@ -72,18 +69,8 @@ function drawMainCanvas() {
   text("REWARDS", 640, 300);
 
   // Settings Button
-  fill(19, 79, 92);
-  rect(10, 500, 120, 40, 5);
-  fill(255, 255, 255);
-  textSize(40);
-  text("SETTINGS", 70, 520);
-
-  // Change Theme Button
-  fill(19, 79, 92);
-  rect(650, 500, 120, 40, 5);
-  fill(255, 255, 255);
-  textSize(40);
-  text("CHANGE THEME", 710, 520);
+  textSize(100);
+  text("⚙️", 70, 520);
 }
 
 // Learn Canvas
@@ -131,6 +118,66 @@ function drawLearnCanvas() {
   text("🏠", 50, 560);
 }
 
+// Shape Matching Instructions Canvas
+function drawShapeMatchingInstructions(){
+  currentCanvas = 'shape_instructions';
+  background(238, 238, 238);
+  textAlign(CENTER, CENTER);
+  textSize(25);
+  fill(19, 79, 92);
+  text("Let's match some shapes!", 400, 250);
+  text("Answer 'yes' if they match and type it into the 'type here' box", 400, 300);
+
+  // The button for starting shape activity
+  textSize(100);
+  text("▶️", 400, 400);
+  
+  // Home Button
+  textSize(50);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);  
+}
+
+// Counting Instructions Canvas
+function drawCountingInstructions() {
+  currentCanvas = 'counting_instructions';
+  background(238, 238, 238);
+  textAlign(CENTER, CENTER);
+  textSize(25);
+  fill(19, 79, 92);
+  text("Let's count some shapes!", 400, 250);
+  text("Answer 'yes' if they match and type it into the 'type here' box", 400, 300);
+
+  // The button for starting counting activity
+  textSize(100);
+  text("▶️", 400, 400);
+  
+  // Home Button
+  textSize(50);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);  
+}
+
+// Buttoning Buttons Instructions Canvas
+function drawButtoningButtonsInstructions() {
+  currentCanvas = 'buttons_instructions';
+  background(238, 238, 238);
+  textAlign(CENTER, CENTER);
+  textSize(25);
+  fill(19, 79, 92);
+  text("Let's learn about buttons", 400, 250);
+  text("Answer with the color of the smaller button", 400, 300);
+
+  // Draw the play button (▶️)
+  textSize(100);
+  text("▶️", 400, 400); 
+
+  // Home Button
+  textSize(50);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);  
+}
+
 // Shape Matching Exercise Canvas
 function drawShapeMatching() {
   currentCanvas = 'shape_matching';
@@ -164,7 +211,7 @@ function drawCounting() {
   background(238, 238, 238);
   inputBox.show();
   enterButton.show();
-
+  
   // Draw shapes
   fill(255, 0, 0);
   ellipse(250, 200, 100, 100); // Red circle
@@ -312,19 +359,46 @@ function mousePressed() {
     drawLearnCanvas();
   } else if (currentCanvas === 'learn') {
     if (mouseX > 200 && mouseX < 600 && mouseY > 120 && mouseY < 180) {
-      drawShapeMatching();
+      drawShapeMatchingInstructions();
     } else if (mouseX > 200 && mouseX < 600 && mouseY > 220 && mouseY < 280) {
-      drawCounting();
+      drawCountingInstructions();
     } else if (mouseX > 200 && mouseX < 600 && mouseY > 320 && mouseY < 380) {
-      drawButtoningButtons();
+      drawButtoningButtonsInstructions();
     }
-  } else if (currentCanvas === 'correct' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+  } 
+  // Transition buttons to activity
+  else if (currentCanvas === 'shape_instructions') {
+    if (mouseX > 350 && mouseX < 450 && mouseY > 350 && mouseY < 450) {
+      drawShapeMatching(); // Transition to shape matching
+    }
+  }
+  
+  // Counting transition to activity
+  else if (currentCanvas === 'counting_instructions') {
+    if (mouseX > 350 && mouseX < 450 && mouseY > 350 && mouseY < 450) {
+      drawCounting(); // Transition to counting
+    }
+  }
+  
+  // Buttoning buttons transition to activity
+  else if (currentCanvas === 'buttons_instructions') {
+    if (mouseX > 350 && mouseX < 450 && mouseY > 350 && mouseY < 450) {
+      drawButtoningButtons(); // Transition to buttoning
+    }
+  }
+  
+  // Correct screen button to microtransaction
+  else if (currentCanvas === 'correct' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
     drawMicrotransactionScreen();
   } else if (currentCanvas === 'incorrect' && mouseX > 350 && mouseX < 470 && mouseY > 300 && mouseY < 340) {
-    if (currentCanvas === 'shape_matching') drawShapeMatching();
-    if (currentCanvas === 'counting') drawCounting();
-    if (currentCanvas === 'buttoning_buttons') drawButtoningButtons();
-  } else if (mouseX > 30 && mouseX < 70 && mouseY > 540 && mouseY < 580) {
+    // Retry the exercise
+    if (currentCanvas === 'shape_matching') drawShapeMatchingInstructions();
+    if (currentCanvas === 'counting') drawCountingInstructions();
+    if (currentCanvas === 'buttoning_buttons') drawButtoningButtonsInstructions();
+  }
+  
+  // Return to main menu
+  else if (mouseX > 30 && mouseX < 70 && mouseY > 540 && mouseY < 580) {
     drawMainCanvas();
   }
 }
