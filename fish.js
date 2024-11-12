@@ -37,33 +37,19 @@ function drawMainCanvas() {
   textSize(24);
   text("Activities For Us", 400, 45);
 
-  // Completion Button
-  fill(56, 118, 29);
-  rect(10, 50, 120, 40, 5);
-  fill(255, 255, 255);
-  textSize(12);
-  text("COMPLETION", 70, 70);
-
-  // Messages Button
-  fill(19, 79, 92);
-  rect(670, 50, 120, 40, 5);
-  fill(255, 255, 255);
-  text("MESSAGES", 730, 70);
-
   // Learn Button
-  textSize(200);
+  textSize(300);
   text("🐡", 150, 300);
   textSize(40);
   text("LEARN", 140, 300);
 
   // Progress Button
-  textSize(300);
+  textSize(200);
   text("🐢", 400, 280);
   textSize(40);
-  text("PROGRESS", 400, 300);
-
+ 
   // Rewards Button
-  textSize(200);
+  textSize(300);
   text("🐋", 660, 300);
   textSize(40);
   text("REWARDS", 640, 300);
@@ -186,10 +172,10 @@ function drawShapeMatching() {
   enterButton.show();
 
   // Draw shapes
-  fill(255, 0, 0);
-  ellipse(250, 200, 200, 150); // Red oval
-  fill(255, 255, 102);
-  ellipse(500, 200, 200, 150); // Yellow oval
+  fill(65,255,0);
+  ellipse(250, 200, 200, 150); // G 0val
+  fill(65,255,0);
+  ellipse(500, 200, 200, 150); // G 0val
 
   // Prompt
   fill(19, 79, 92);
@@ -205,12 +191,264 @@ function drawShapeMatching() {
   text("🏠", 50, 560);
 }
 
-// Counting Exercise Canvas
-function drawCounting() {
-  currentCanvas = 'counting';
+function drawShapeMatching2(){
+  currentCanvas = 'shape_matching2';
+  background(197,197,197);
+  inputBox.show();
+  enterButton.show();
+  
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 2 - MEDIUM", 400, 45);
+  
+  // Draw shapes
+  fill(255, 0, 0);
+  rect(200, 200, 55, 40);//red rect
+  fill(0,45,255);
+  rect(300, 230, 55, 40);//blue rect
+  fill(244,255,0);
+  rect(400, 200, 55, 40);//yellow rect
+  
+  // Prompt
+  fill(19, 79, 92);
+  rect(200, 300, 400, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  textAlign(CENTER, CENTER);
+  text("Do these shapes match?", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+//LVL 3 - HARD
+function drawShapeMatching3() {
+  currentCanvas = 'shape_matching3';
+  background(135,135,135);
+  inputBox.show();
+  enterButton.show();
+  
+  //Level 3
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 3 - HARD", 400, 45);
+  
+  // Draw shapes
+  fill(255,172,0);
+  square(150, 200, 55); //orange square
+  fill(95,255,0);
+  square(250, 200, 55, 20); // green curved square
+  fill(255,0,217);
+  square(350, 200, 55) //pink square
+
+  // Prompt
+  fill(19, 79, 92);
+  rect(200, 300, 400, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  textAlign(CENTER, CENTER);
+  text("Are these all the same shapes?", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+//Shape Matching Correct
+// lvl 1
+function drawCorrectScreenMatch1() {
+  currentCanvas = 'correct_match1';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+// lvl 2
+function drawCorrectScreenMatch2() {
+  currentCanvas = 'correct_match2';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+// lvl 3
+function drawCorrectScreenMatch3() {
+  currentCanvas = 'correct_match3';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+//incorrect
+// lvl1
+function drawIncorrectScreen() {
+  currentCanvas = 'incorrect_Match';
+  background(255, 200, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(255, 0, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("INCORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 120, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("Try Again >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+// Microtransaction Screen
+function drawRewards() {
+  currentCanvas = 'rewards';
+  background(255, 200, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(200, 100, 100);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("Membership", 400, 150);
+
+  fill(19, 79, 92);
+  rect(250, 250, 300, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  text("Premium: Only 130$ a week!!", 400, 270);
+
+  fill(19, 79, 92);
+  rect(300, 350, 200, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("BUY NOW !!! >", 400, 370);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+
+// Count Exercise L1
+function drawCount() {
+  currentCanvas = 'count';
   background(238, 238, 238);
   inputBox.show();
   enterButton.show();
+
+background(238, 238, 238);
+  inputBox.show();
+  enterButton.show();
+
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 1 - EASY", 400, 45);
+
+  
+  // Draw shapes
+  fill(0, 255, 0);
+  rect(400, 150, 80, 80); // Green square
+  fill(0, 0, 255);
+  ellipse(550, 200, 100, 100); // Blue circle
+
+  // Prompt
+  fill(19, 79, 92);
+  rect(200, 300, 400, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  textAlign(CENTER, CENTER);
+  text("How many shapes are on the screen?", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+// Count Exercise L2 
+function drawCount2() {
+  currentCanvas = 'count2';
+  background(197,197,197);
+  inputBox.show();
+  enterButton.show();
+
+  inputBox.show();
+  enterButton.show();
+
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 2 - MEDIUM", 400, 45);
   
   // Draw shapes
   fill(255, 0, 0);
@@ -233,6 +471,119 @@ function drawCounting() {
   textAlign(CENTER, CENTER);
   text("🏠", 50, 560);
 }
+// Count Exercise L3 
+function drawCount3() {
+  currentCanvas = 'count3';
+  background(135,135,135);
+  inputBox.show();
+  enterButton.show();
+
+  inputBox.show();
+  enterButton.show();
+
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 3 - HARD", 400, 45);
+  
+  // Draw shapes
+  fill(255, 0, 0);
+  ellipse(250, 200, 100, 100); // Red circle
+  fill(0, 255, 0);
+  rect(400, 150, 80, 80); // Green square
+  fill(0, 0, 255);
+  ellipse(550, 200, 100, 100); // Blue circle
+
+  // Prompt
+  fill(19, 79, 92);
+  rect(200, 300, 400, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  textAlign(CENTER, CENTER);
+  text("How many shapes are on the screen?", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+//Counting CORRECTS
+// lvl 1
+function drawCorrectScreenCount1() {
+  currentCanvas = 'correct_count1';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+// lvl 2
+function drawCorrectScreenCount2() {
+  currentCanvas = 'correct_count2';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+// lvl 3
+function drawCorrectScreenCount3() {
+  currentCanvas = 'correct_count3';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
 
 // Buttoning Buttons Exercise Canvas
 function drawButtoningButtons() {
@@ -285,70 +636,26 @@ function drawCorrectScreen() {
   text("🏠", 50, 560);
 }
 
-// Incorrect Screen
-function drawIncorrectScreen() {
-  currentCanvas = 'incorrect';
-  background(255, 200, 200);
-  inputBox.hide();
-  enterButton.hide();
-
-  fill(255, 0, 0);
-  textSize(36);
-  textAlign(CENTER, CENTER);
-  text("INCORRECT!!!", 400, 200);
-
-  fill(19, 79, 92);
-  rect(350, 300, 120, 40, 5);
-  fill(255, 255, 0);
-  textSize(20);
-  text("Try Again >", 400, 320);
-
-  // Home Button
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  text("🏠", 50, 560);
-}
-
-// Microtransaction Screen
-function drawMicrotransactionScreen() {
-  currentCanvas = 'microtransaction';
-  background(255, 200, 200);
-  inputBox.hide();
-  enterButton.hide();
-
-  fill(200, 100, 100);
-  textSize(36);
-  textAlign(CENTER, CENTER);
-  text("Membership", 400, 150);
-
-  fill(19, 79, 92);
-  rect(250, 250, 300, 40, 5);
-  fill(255, 255, 0);
-  textSize(18);
-  text("Premium: Only 130$ a week!!", 400, 270);
-
-  fill(19, 79, 92);
-  rect(300, 350, 200, 40, 5);
-  fill(255, 255, 0);
-  textSize(20);
-  text("BUY NOW !!! >", 400, 370);
-
-  // Home Button
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  text("🏠", 50, 560);
-}
-
-// Check Answer Logic
 function checkAnswer() {
   let answer = inputBox.value().toLowerCase().trim();
+  
+  // Handle shape matching answers
   if (currentCanvas === 'shape_matching' && answer === "yes") {
-    drawCorrectScreen();
-  } else if (currentCanvas === 'counting' && answer === "3") {
-    drawCorrectScreen();
-  } else if (currentCanvas === 'buttoning_buttons' && answer === "red") {
-    drawCorrectScreen();
-  } else {
+    drawCorrectScreenMatch1();
+  } else if (currentCanvas === 'shape_matching2' && answer === "no") {
+    drawCorrectScreenMatch2();
+  } else if (currentCanvas === 'shape_matching3' && answer === "no") {
+    drawCorrectScreenMatch3();
+  } 
+  // Handle counting answers
+  else if (currentCanvas === 'count' && answer === "2") {
+    drawCorrectScreenCount1();
+  } else if (currentCanvas === 'count2' && answer === "3") {
+    drawCorrectScreenCount2();
+  } else if (currentCanvas === 'count3' && answer === "3") {
+    drawCorrectScreenCount3();
+  }
+  else {
     drawIncorrectScreen();
   }
 }
@@ -365,7 +672,13 @@ function mousePressed() {
     } else if (mouseX > 200 && mouseX < 600 && mouseY > 320 && mouseY < 380) {
       drawButtoningButtonsInstructions();
     }
-  } 
+  }
+  
+  //rewards
+    if (currentCanvas === 'main' && dist(mouseX, mouseY, 660, 300) < 50) {
+    drawRewards(); // Transition to rewards (microtransaction)
+  }
+  
   // Transition buttons to activity
   else if (currentCanvas === 'shape_instructions') {
     if (mouseX > 350 && mouseX < 450 && mouseY > 350 && mouseY < 450) {
@@ -376,7 +689,7 @@ function mousePressed() {
   // Counting transition to activity
   else if (currentCanvas === 'counting_instructions') {
     if (mouseX > 350 && mouseX < 450 && mouseY > 350 && mouseY < 450) {
-      drawCounting(); // Transition to counting
+      drawCount(); // Transition to counting
     }
   }
   
@@ -387,18 +700,67 @@ function mousePressed() {
     }
   }
   
-  // Correct screen button to microtransaction
-  else if (currentCanvas === 'correct' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
-    drawMicrotransactionScreen();
-  } else if (currentCanvas === 'incorrect' && mouseX > 350 && mouseX < 470 && mouseY > 300 && mouseY < 340) {
-    // Retry the exercise
-    if (currentCanvas === 'shape_matching') drawShapeMatchingInstructions();
-    if (currentCanvas === 'counting') drawCountingInstructions();
-    if (currentCanvas === 'buttoning_buttons') drawButtoningButtonsInstructions();
+    // Next button for Shape Matching
+  else if (currentCanvas === 'correct_match1' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+    drawShapeMatching2(); // Transition to level 2
+  }
+  // Next button for level 2 - Shape Matching
+  else if (currentCanvas === 'correct_match2' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+    drawShapeMatching3(); // Transition to level 3
+  }
+  // Next button for level 3 - Shape Matching
+  else if (currentCanvas === 'correct_match3' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+    drawMainCanvas(); // Return to the main canvas or continue with further activities
   }
   
+  else if (currentCanvas === 'correct_count1' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+    drawCount2(); // Transition to level 3
+  }
+  // Counting - Level 3 -> Main Menu
+  else if (currentCanvas === 'correct_count2' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+    drawCount3(); // Return to the main canvas or continue with further activities
+  }
+  
+    
   // Return to main menu
   else if (mouseX > 30 && mouseX < 70 && mouseY > 540 && mouseY < 580) {
     drawMainCanvas();
   }
 }
+
+
+let progress = 0; // Progress starts at 0 and increases with each completed challenge
+
+function draw() {
+  drawProgressBar();
+}
+
+function drawProgressBar() {
+  fill(238, 238, 238); // Background of the progress bar
+  rect(50, 580, 700, 20, 10); // Progress bar background
+  
+  fill(56, 118, 29); // Fill color for progress
+  rect(50, 580, progress * 7, 20, 10); // Progress based on progress variable
+  
+  fill(0);
+  textSize(12);
+  textAlign(CENTER, CENTER);
+  text(`Progress: ${Math.min(progress, 100)}%`, 400, 590); // Display percentage
+}
+
+function checkAnswer() {
+  let answer = inputBox.value().toLowerCase().trim();
+  if (currentCanvas === 'shape_matching' && answer === "yes") {
+    drawCorrectScreenMatch1();
+    progress = Math.min(progress + 10, 100); // Increase progress by 10% up to 100%
+  } else if (currentCanvas === 'shape_matching2' && answer === "no") {
+    drawCorrectScreenMatch2();
+    progress = Math.min(progress + 10, 100);
+  } else if (currentCanvas === 'shape_matching3' && answer === "no") {
+    drawCorrectScreenMatch3();
+    progress = Math.min(progress + 10, 100);
+  } else {
+    drawIncorrectScreenMatch();
+  }
+}
+
