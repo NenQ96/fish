@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(800, 600);
-  textFont('Times New Roman');
+  textFont('Comic Sans');
   textSize(12);
 
   // Create input box and enter button for exercises but hide initially
@@ -152,7 +152,7 @@ function drawButtoningButtonsInstructions() {
   textSize(25);
   fill(19, 79, 92);
   text("Let's learn about buttons", 400, 250);
-  text("Answer with the color of the smaller button", 400, 300);
+  text("Answer with the color of the specificed button", 400, 300);
 
   // Draw the play button (▶️)
   textSize(100);
@@ -496,6 +496,12 @@ function drawCount3() {
   rect(400, 150, 80, 80); // Green square
   fill(0, 0, 255);
   ellipse(550, 200, 100, 100); // Blue circle
+  fill(255,138,0);
+  square(400, 200, 80, 80); //orange triangle 
+  fill(0,255,118);
+  //rotateY(frameCount * 0.01);
+  square(400, 300, 80, 80);
+  //teal spinning triangle 
 
   // Prompt
   fill(19, 79, 92);
@@ -585,18 +591,126 @@ function drawCorrectScreenCount3() {
 }
 
 
-// Buttoning Buttons Exercise Canvas
-function drawButtoningButtons() {
-  currentCanvas = 'buttoning_buttons';
+// Buttoning Buttons L1
+function drawButtons() {
+  currentCanvas = 'button';
   background(238, 238, 238);
   inputBox.show();
   enterButton.show();
 
+background(238, 238, 238);
+  inputBox.show();
+  enterButton.show();
+
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 1 - EASY", 400, 45);
+
+  
   // Draw buttons
-  fill(255, 0, 0);
-  rect(250, 200, 100, 50); // Small red button
-  fill(0, 255, 0);
-  rect(450, 200, 150, 50); // Large green button
+  fill(255,0,0);
+  ellipse(550, 200, 100, 100);//bl button
+  
+  fill(255,0,0);
+  ellipse(200, 200, 200, 200);//bl button
+  
+
+  // Prompt
+  fill(19, 79, 92);
+  rect(200, 300, 400, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  textAlign(CENTER, CENTER);
+  text("What is the color of the smaller button?", 400, 320);
+
+
+  // Home Button
+  textSize(50);
+  textAlign(CENTER, CENTER);
+  text("🏠", 100, 500);
+}
+
+// Button Exercise L2 
+function drawButton2() {
+  currentCanvas = 'button2';
+  background(238, 238, 238);
+  inputBox.show();
+  enterButton.show();
+
+background(197,197,197);
+  inputBox.show();
+  enterButton.show();
+
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 2 - MEDIUM", 400, 45);
+  
+  fill(255,0,0);
+  ellipse(550, 200, 300, 300);//bl button
+  
+  fill(255,0,0);
+  ellipse(200, 200, 200, 200);//bl button
+  
+  fill(255,251,0);
+  ellipse(550, 200, 100, 100);//bl button
+  
+  // Prompt
+  fill(19, 79, 92);
+  rect(200, 300, 400, 40, 5);
+  fill(255, 255, 0);
+  textSize(18);
+  textAlign(CENTER, CENTER);
+  text("What is the color of the smaller button?", 400, 320);
+
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+// Button Exercise L3
+function drawButton3() {
+  currentCanvas = 'button3';
+  background(238, 238, 238);
+  inputBox.show();
+  enterButton.show();
+
+background(238, 238, 238);
+  inputBox.show();
+  enterButton.show();
+
+  fill(19,79,92);
+  fill(19, 79, 92);
+  rect(200, 20, 400, 50, 5);
+  fill(255, 255, 0);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text("LEVEL 3 - HARD", 400, 45);
+  
+  fill(255,0,0);
+  ellipse(550, 200, 300, 300);//bl button
+  
+  fill(255,0,0);
+  ellipse(200, 200, 200, 200);//bl button
+  
+  fill(255,251,0);
+  ellipse(550, 200, 100, 100);//bl button
+  
+  fill(87,255,0);
+  ellipse(200, 100, 50, 50);//bl button
+  
+  fill(0,2,255);
+  ellipse(100, 100, 30, 30);//bl button
+  
+  
 
   // Prompt
   fill(19, 79, 92);
@@ -611,10 +725,8 @@ function drawButtoningButtons() {
   textAlign(CENTER, CENTER);
   text("🏠", 50, 560);
 }
-
-// Correct Screen
-function drawCorrectScreen() {
-  currentCanvas = 'correct';
+function drawCorrectScreenButton1() {
+  currentCanvas = 'correct_button1';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -636,24 +748,95 @@ function drawCorrectScreen() {
   text("🏠", 50, 560);
 }
 
+// lvl 2
+function drawCorrectScreenButton2() {
+  currentCanvas = 'correct_button2';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+// lvl 3
+function drawCorrectScreenButton3() {
+  currentCanvas = 'correct_button3';
+  background(200, 255, 200);
+  inputBox.hide();
+  enterButton.hide();
+
+  fill(0, 128, 0);
+  textSize(36);
+  textAlign(CENTER, CENTER);
+  text("CORRECT!!!", 400, 200);
+
+  fill(19, 79, 92);
+  rect(350, 300, 100, 40, 5);
+  fill(255, 255, 0);
+  textSize(20);
+  text("NEXT >", 400, 320);
+
+  // Home Button
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("🏠", 50, 560);
+}
+
+
+
+
 function checkAnswer() {
   let answer = inputBox.value().toLowerCase().trim();
   
   // Handle shape matching answers
   if (currentCanvas === 'shape_matching' && answer === "yes") {
     drawCorrectScreenMatch1();
+    progress = Math.min(progress + 10, 100);
   } else if (currentCanvas === 'shape_matching2' && answer === "no") {
     drawCorrectScreenMatch2();
+    progress = Math.min(progress + 10, 100);
   } else if (currentCanvas === 'shape_matching3' && answer === "no") {
     drawCorrectScreenMatch3();
+    progress = Math.min(progress + 10, 100);
   } 
   // Handle counting answers
   else if (currentCanvas === 'count' && answer === "2") {
     drawCorrectScreenCount1();
+    progress = Math.min(progress + 10, 100);
   } else if (currentCanvas === 'count2' && answer === "3") {
     drawCorrectScreenCount2();
-  } else if (currentCanvas === 'count3' && answer === "3") {
+    progress = Math.min(progress + 10, 100);
+  } else if (currentCanvas === 'count3' && answer === "5") {
     drawCorrectScreenCount3();
+    progress = Math.min(progress + 10, 100);
+  }
+  
+  //handle Button answers
+  else if (currentCanvas === 'button' && answer === "red") {
+   drawCorrectScreenButton1();
+    progress = Math.min(progress + 10, 100);
+  }
+  else if (currentCanvas === 'button2' && answer === "yellow") {
+   drawCorrectScreenButton2();
+    progress = Math.min(progress + 10, 100);
+  }
+  else if (currentCanvas === 'button3' && answer === "blue") {
+   drawCorrectScreenButton3();
+    progress = Math.min(progress + 10, 100);
   }
   else {
     drawIncorrectScreen();
@@ -696,7 +879,7 @@ function mousePressed() {
   // Buttoning buttons transition to activity
   else if (currentCanvas === 'buttons_instructions') {
     if (mouseX > 350 && mouseX < 450 && mouseY > 350 && mouseY < 450) {
-      drawButtoningButtons(); // Transition to buttoning
+      drawButtons(); // Transition to buttoning
     }
   }
   
@@ -720,6 +903,15 @@ function mousePressed() {
   else if (currentCanvas === 'correct_count2' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
     drawCount3(); // Return to the main canvas or continue with further activities
   }
+  
+else if (currentCanvas === 'correct_button1' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+  drawButton2(); // This could transition to Level 3 or another canvas
+}
+
+// Return to Main Menu or continue further activities
+else if (currentCanvas === 'correct_button2' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+  drawButton3(); // This could either return to the main menu or trigger another action
+}
   
     
   // Return to main menu
@@ -747,20 +939,3 @@ function drawProgressBar() {
   textAlign(CENTER, CENTER);
   text(`Progress: ${Math.min(progress, 100)}%`, 400, 590); // Display percentage
 }
-
-function checkAnswer() {
-  let answer = inputBox.value().toLowerCase().trim();
-  if (currentCanvas === 'shape_matching' && answer === "yes") {
-    drawCorrectScreenMatch1();
-    progress = Math.min(progress + 10, 100); // Increase progress by 10% up to 100%
-  } else if (currentCanvas === 'shape_matching2' && answer === "no") {
-    drawCorrectScreenMatch2();
-    progress = Math.min(progress + 10, 100);
-  } else if (currentCanvas === 'shape_matching3' && answer === "no") {
-    drawCorrectScreenMatch3();
-    progress = Math.min(progress + 10, 100);
-  } else {
-    drawIncorrectScreenMatch();
-  }
-}
-
