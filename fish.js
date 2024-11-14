@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(800, 600);
-  textFont('Comic Sans');
+  textFont('Comic Sans MS');
   textSize(12);
 
   // Create input box and enter button for exercises but hide initially
