@@ -1,5 +1,21 @@
-let previousCanvas = '';
-let currentCanvas = 'main';
+//1st buttons
+let smallerButtonX = 200;
+let smallerButtonY = 200;
+let smallerButtonRadius = 100; // Radius for the smaller button
+
+let largerButtonX = 550;
+let largerButtonY = 200;
+let largerButtonRadius = 50; // Radius for the larger button
+
+//2nd button -clicks on the smaller button (yellow)
+let yellowButtonX = 550; // X position of the yellow button
+let yellowButtonY = 200; // Y position of the yellow button
+let yellowButtonRadius = 50; // Radius of the yellow button (half of the width/height)
+
+//3rd button - clicks on the bleu button
+let blueButtonX = 100; // X position of the blue button
+let blueButtonY = 100; // Y position of the blue button
+let blueButtonRadius = 15; // Radius of the blue button (half of the width/height)
 
 function setup() {
   createCanvas(800, 600);
@@ -27,7 +43,7 @@ function draw() {
 
 // Main Canvas Function
 function drawMainCanvas() {
-  setCanvas('main');
+  currentCanvas = 'main';
   background(238, 238, 238);
   inputBox.hide();
   enterButton.hide();
@@ -64,7 +80,7 @@ function drawMainCanvas() {
 
 // Learn Canvas
 function drawLearnCanvas() {
-  setCanvas('learn');
+  currentCanvas = 'learn';
   background(238, 238, 238);
   inputBox.hide();
   enterButton.hide();
@@ -109,7 +125,7 @@ function drawLearnCanvas() {
 
 // Shape Matching Instructions Canvas
 function drawShapeMatchingInstructions(){
-  setCanvas('shape_instructions');
+  currentCanvas = 'shape_instructions';
   background(238, 238, 238);
   textAlign(CENTER, CENTER);
   textSize(25);
@@ -129,7 +145,7 @@ function drawShapeMatchingInstructions(){
 
 // Counting Instructions Canvas
 function drawCountingInstructions() {
-  setCanvas('counting_instructions');
+  currentCanvas = 'counting_instructions';
   background(238, 238, 238);
   textAlign(CENTER, CENTER);
   textSize(25);
@@ -149,13 +165,13 @@ function drawCountingInstructions() {
 
 // Buttoning Buttons Instructions Canvas
 function drawButtoningButtonsInstructions() {
-  setCanvas('buttons_instructions');
+  currentCanvas = 'buttons_instructions';
   background(238, 238, 238);
   textAlign(CENTER, CENTER);
   textSize(25);
   fill(19, 79, 92);
   text("Let's learn about buttons", 400, 250);
-  text("Answer with the color of the specificed button", 400, 300);
+  text("Click on the button according to the prompt on the screen", 400, 300);
 
   // Draw the play button (▶️)
   textSize(100);
@@ -169,7 +185,7 @@ function drawButtoningButtonsInstructions() {
 
 // Shape Matching Exercise Canvas
 function drawShapeMatching() {
-  setCanvas('shape_matching');
+  currentCanvas = 'shape_matching';
   background(238, 238, 238);
   inputBox.show();
   enterButton.show();
@@ -195,7 +211,7 @@ function drawShapeMatching() {
 }
 
 function drawShapeMatching2(){
-  setCanvas('shape_matching2');
+  currentCanvas = 'shape_matching2';
   background(197,197,197);
   inputBox.show();
   enterButton.show();
@@ -232,7 +248,7 @@ function drawShapeMatching2(){
 
 //LVL 3 - HARD
 function drawShapeMatching3() {
-  setCanvas('shape_matching3');
+  currentCanvas = 'shape_matching3';
   background(135,135,135);
   inputBox.show();
   enterButton.show();
@@ -270,7 +286,7 @@ function drawShapeMatching3() {
 //Shape Matching Correct
 // lvl 1
 function drawCorrectScreenMatch1() {
-  setCanvas('correct_match1');
+  currentCanvas = 'correct_match1';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -294,7 +310,7 @@ function drawCorrectScreenMatch1() {
 
 // lvl 2
 function drawCorrectScreenMatch2() {
-  setCanvas('correct_match2');
+  currentCanvas = 'correct_match2';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -318,7 +334,7 @@ function drawCorrectScreenMatch2() {
 
 // lvl 3
 function drawCorrectScreenMatch3() {
-  setCanvas('correct_match3');
+  currentCanvas = 'correct_match3';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -341,8 +357,9 @@ function drawCorrectScreenMatch3() {
 }
 
 //incorrect
+// lvl1
 function drawIncorrectScreen() {
-  setCanvas('incorrect_match');
+  currentCanvas = 'incorrect_Match';
   background(255, 200, 200);
   inputBox.hide();
   enterButton.hide();
@@ -364,10 +381,9 @@ function drawIncorrectScreen() {
   text("🏠", 50, 560);
 }
 
-
 // Microtransaction Screen
 function drawRewards() {
-  setCanvas('rewards');
+  currentCanvas = 'rewards';
   background(255, 200, 200);
   inputBox.hide();
   enterButton.hide();
@@ -398,7 +414,7 @@ function drawRewards() {
 
 // Count Exercise L1
 function drawCount() {
-  setCanvas('count');
+  currentCanvas = 'count';
   background(238, 238, 238);
   inputBox.show();
   enterButton.show();
@@ -437,7 +453,7 @@ background(238, 238, 238);
 }
 // Count Exercise L2 
 function drawCount2() {
-  setCanvas('count2');
+  currentCanvas = 'count2';
   background(197,197,197);
   inputBox.show();
   enterButton.show();
@@ -476,7 +492,7 @@ function drawCount2() {
 }
 // Count Exercise L3 
 function drawCount3() {
-  setCanvas('count3');
+  currentCanvas = 'count3';
   background(135,135,135);
   inputBox.show();
   enterButton.show();
@@ -523,7 +539,7 @@ function drawCount3() {
 //Counting CORRECTS
 // lvl 1
 function drawCorrectScreenCount1() {
-  setCanvas('correct_count1');
+  currentCanvas = 'correct_count1';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -547,7 +563,7 @@ function drawCorrectScreenCount1() {
 
 // lvl 2
 function drawCorrectScreenCount2() {
-  setCanvas('correct_count2');
+  currentCanvas = 'correct_count2';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -571,7 +587,7 @@ function drawCorrectScreenCount2() {
 
 // lvl 3
 function drawCorrectScreenCount3() {
-  setCanvas('correct_count3');
+  currentCanvas = 'correct_count3';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -593,17 +609,10 @@ function drawCorrectScreenCount3() {
   text("🏠", 50, 560);
 }
 
-
 // Buttoning Buttons L1
 function drawButtons() {
-  setCanvas('button');
+  currentCanvas = 'button';
   background(238, 238, 238);
-  inputBox.show();
-  enterButton.show();
-
-background(238, 238, 238);
-  inputBox.show();
-  enterButton.show();
 
   fill(19,79,92);
   fill(19, 79, 92);
@@ -613,13 +622,13 @@ background(238, 238, 238);
   textSize(24);
   text("LEVEL 1 - EASY", 400, 45);
 
-  
-  // Draw buttons
-  fill(255,0,0);
-  ellipse(550, 200, 100, 100);//bl button
-  
-  fill(255,0,0);
-  ellipse(200, 200, 200, 200);//bl button
+  // Draw the larger red button
+  fill(255, 0, 0);
+  ellipse(largerButtonX, largerButtonY, 100, 100); // smaller button
+
+  // Draw the smaller red button
+  fill(255, 0, 0);
+  ellipse(smallerButtonX, smallerButtonY, 200, 200); // larger button
   
 
   // Prompt
@@ -628,7 +637,7 @@ background(238, 238, 238);
   fill(255, 255, 0);
   textSize(18);
   textAlign(CENTER, CENTER);
-  text("What is the color of the smaller button?", 400, 320);
+  text("Which button is the largest?", 400, 320);
 
 
   // Home Button
@@ -639,14 +648,8 @@ background(238, 238, 238);
 
 // Button Exercise L2 
 function drawButton2() {
-  setCanvas('button2');
-  background(238, 238, 238);
-  inputBox.show();
-  enterButton.show();
-
-background(197,197,197);
-  inputBox.show();
-  enterButton.show();
+  currentCanvas = 'button2';
+  background(197,197,197);
 
   fill(19,79,92);
   fill(19, 79, 92);
@@ -656,14 +659,17 @@ background(197,197,197);
   textSize(24);
   text("LEVEL 2 - MEDIUM", 400, 45);
   
-  fill(255,0,0);
-  ellipse(550, 200, 300, 300);//bl button
-  
-  fill(255,0,0);
-  ellipse(200, 200, 200, 200);//bl button
-  
-  fill(255,251,0);
-  ellipse(550, 200, 100, 100);//bl button
+  // Draw the larger red button (still large)
+  fill(255, 0, 0);
+  ellipse(550, 200, 300, 300); // Big red button
+
+  // Draw the smaller red button (target button)
+  fill(255, 0, 0);
+  ellipse(200, 200, 200, 200); // Smaller red button
+
+  // Draw the yellow button (this is the clickable button)
+  fill(255, 251, 0);
+  ellipse(yellowButtonX, yellowButtonY, 100, 100); // Yellow button
   
   // Prompt
   fill(19, 79, 92);
@@ -671,7 +677,7 @@ background(197,197,197);
   fill(255, 255, 0);
   textSize(18);
   textAlign(CENTER, CENTER);
-  text("What is the color of the smaller button?", 400, 320);
+  text("Which button is the smallest", 400, 320);
 
 
   // Home Button
@@ -681,15 +687,9 @@ background(197,197,197);
 }
 // Button Exercise L3
 function drawButton3() {
-  setCanvas('button3');
-  background(238, 238, 238);
-  inputBox.show();
-  enterButton.show();
-
-background(238, 238, 238);
-  inputBox.show();
-  enterButton.show();
-
+  currentCanvas = 'button3';
+  background(135,135,135);
+  
   fill(19,79,92);
   fill(19, 79, 92);
   rect(200, 20, 400, 50, 5);
@@ -698,38 +698,42 @@ background(238, 238, 238);
   textSize(24);
   text("LEVEL 3 - HARD", 400, 45);
   
-  fill(255,0,0);
-  ellipse(550, 200, 300, 300);//bl button
-  
-  fill(255,0,0);
-  ellipse(200, 200, 200, 200);//bl button
-  
-  fill(255,251,0);
-  ellipse(550, 200, 100, 100);//bl button
-  
-  fill(87,255,0);
-  ellipse(200, 100, 50, 50);//bl button
-  
-  fill(0,2,255);
-  ellipse(100, 100, 30, 30);//bl button
-  
-  
+  // Draw the larger red button
+  fill(255, 0, 0);
+  ellipse(550, 200, 300, 300); // Big red button
 
+  // Draw the smaller red button
+  fill(255, 0, 0);
+  ellipse(200, 200, 200, 200); // Smaller red button
+
+  // Draw the yellow button
+  fill(255, 251, 0);
+  ellipse(550, 200, 100, 100); // Yellow button
+
+  // Draw the green button
+  fill(87, 255, 0);
+  ellipse(200, 100, 50, 50); // Green button
+
+  // Draw the blue button (this is the clickable button)
+  fill(0, 2, 255);
+  ellipse(blueButtonX, blueButtonY, 30, 30); // Blue button
+  
   // Prompt
   fill(19, 79, 92);
   rect(200, 300, 400, 40, 5);
   fill(255, 255, 0);
   textSize(18);
   textAlign(CENTER, CENTER);
-  text("What is the color of the smaller button?", 400, 320);
+  text("Which button is the smallest", 400, 320);
 
   // Home Button
   textSize(32);
   textAlign(CENTER, CENTER);
   text("🏠", 50, 560);
 }
+
 function drawCorrectScreenButton1() {
-  setCanvas('correct_button1');
+  currentCanvas = 'correct_button1';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -753,7 +757,7 @@ function drawCorrectScreenButton1() {
 
 // lvl 2
 function drawCorrectScreenButton2() {
-  setCanvas('correct_button2');
+  currentCanvas = 'correct_button2';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -777,7 +781,7 @@ function drawCorrectScreenButton2() {
 
 // lvl 3
 function drawCorrectScreenButton3() {
-  setCanvas('correct_button3');
+  currentCanvas = 'correct_button3';
   background(200, 255, 200);
   inputBox.hide();
   enterButton.hide();
@@ -799,17 +803,14 @@ function drawCorrectScreenButton3() {
   text("🏠", 50, 560);
 }
 
-
-
-
 function checkAnswer() {
   let answer = inputBox.value().toLowerCase().trim();
-
+  
   // Handle shape matching answers
   if (currentCanvas === 'shape_matching' && answer === "yes") {
     drawCorrectScreenMatch1();
     progress = Math.min(progress + 10, 100);
-  } else if (currentCanvas === 'shape_matching2' && answer === "yes") {
+  } else if (currentCanvas === 'shape_matching2' && answer === "no") {
     drawCorrectScreenMatch2();
     progress = Math.min(progress + 10, 100);
   } else if (currentCanvas === 'shape_matching3' && answer === "no") {
@@ -827,29 +828,14 @@ function checkAnswer() {
     drawCorrectScreenCount3();
     progress = Math.min(progress + 10, 100);
   }
-  // Handle Button answers
-  else if (currentCanvas === 'button' && answer === "red") {
-    drawCorrectScreenButton1();
-    progress = Math.min(progress + 10, 100);
-  } else if (currentCanvas === 'button2' && answer === "yellow") {
-    drawCorrectScreenButton2();
-    progress = Math.min(progress + 10, 100);
-  } else if (currentCanvas === 'button3' && answer === "blue") {
-    drawCorrectScreenButton3();
-    progress = Math.min(progress + 10, 100);
-  }
-  // Incorrect answer
   else {
-    previousCanvas = currentCanvas; // Save the current canvas before transitioning
-    drawIncorrectScreen(); // Transition to incorrect screen
+    drawIncorrectScreen();
   }
 }
 
-
 // Mouse Pressed Function for Navigation
 function mousePressed() {
-
- if (currentCanvas === 'main' && dist(mouseX, mouseY, 150, 300) < 50) {
+  if (currentCanvas === 'main' && dist(mouseX, mouseY, 150, 300) < 50) {
     drawLearnCanvas();
   } else if (currentCanvas === 'learn') {
     if (mouseX > 200 && mouseX < 600 && mouseY > 120 && mouseY < 180) {
@@ -887,7 +873,7 @@ function mousePressed() {
     }
   }
   
-    // Next button for Shape Matching
+    // transition buttons to net screen
   else if (currentCanvas === 'correct_match1' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
     drawShapeMatching2(); // Transition to level 2
   }
@@ -907,75 +893,46 @@ function mousePressed() {
   else if (currentCanvas === 'correct_count2' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
     drawCount3(); // Return to the main canvas or continue with further activities
   }
-  else if (currentCanvas === 'correct_count3' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+    else if (currentCanvas === 'correct_count3' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
     drawMainCanvas(); // Return to the main canvas or continue with further activities
   }
   
 else if (currentCanvas === 'correct_button1' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
   drawButton2(); // This could transition to Level 3 or another canvas
 }
-
 // Return to Main Menu or continue further activities
 else if (currentCanvas === 'correct_button2' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
   drawButton3(); // This could either return to the main menu or trigger another action
 }
-else if (currentCanvas === 'correct_button3' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
-  drawMainCanvas(); // This could either return to the main menu or trigger another action
+  else if (currentCanvas === 'correct_button3' && mouseX > 350 && mouseX < 450 && mouseY > 300 && mouseY < 340) {
+   drawMainCanvas(); // This could either return to the main menu or trigger another action
 }
   
-    
-  // Return to main menu
-  else if (mouseX > 30 && mouseX < 70 && mouseY > 540 && mouseY < 580) {
-    drawMainCanvas();
+  
+  //BUTTON PRESSES 
+  let d = dist(mouseX, mouseY, smallerButtonX, smallerButtonY);
+  if (d < smallerButtonRadius) {
+    drawCorrectScreenButton1(); // Call the function when the smaller button is clicked
+    progress = Math.min(progress + 10, 100);
+  }
+    let d2 = dist(mouseX, mouseY, yellowButtonX, yellowButtonY); // Distance from mouse to the yellow button
+  if (d2 < yellowButtonRadius) {
+    drawCorrectScreenButton2(); // Call this function when the yellow button is clicked
+    progress = Math.min(progress + 10, 100);
+  }
+    let d3 = dist(mouseX, mouseY, blueButtonX, blueButtonY); // Distance from mouse to the blue button
+  if (d3 < blueButtonRadius) {
+    drawCorrectScreenButton3(); // Call this function when the blue button is clicked
+    progress = Math.min(progress + 10, 100);
   }
   
-  // Retry button on the incorrect screen
-if (currentCanvas === 'incorrect_match' && mouseX > 350 && mouseX < 470 && mouseY > 300 && mouseY < 340) {
-    // Restore the previous activity canvas
-    switch (previousCanvas) {
-      case 'shape_matching':
-        drawShapeMatching();
-        break;
-      case 'shape_matching2':
-        drawShapeMatching2();
-        break;
-      case 'shape_matching3':
-        drawShapeMatching3();
-        break;
-      case 'count':
-        drawCount();
-        break;
-      case 'count2':
-        drawCount2();
-        break;
-      case 'count3':
-        drawCount3();
-        break;
-      case 'button':
-        drawButtons();
-        break;
-      case 'button2':
-        drawButton2();
-        break;
-      case 'button3':
-        drawButton3();
-        break;
-      default:
-        drawMainCanvas(); // Default fallback
-    }
-  
 }
-  
+   
   // Return to main menu
-  else if (mouseX > 30 && mouseX < 70 && mouseY > 540 && mouseY < 580) {
-    drawMainCanvas();
-  }
-}
+  //else if (mouseX > 30 && mouseX < 70 && mouseY > 540 && mouseY < 580) {
+    //drawMainCanvas();
+//}
 
-function setCanvas(newCanvas) {
-  previousCanvas = currentCanvas;
-  currentCanvas = newCanvas;
-}
 
 let progress = 0; // Progress starts at 0 and increases with each completed challenge
 
