@@ -327,7 +327,7 @@ function drawCorrectScreenMatch3() {
   fill(0, 128, 0);
   textSize(36);
   textAlign(CENTER, CENTER);
-  text("CORRECT!!!", 400, 200);
+  text("Congratulations - you finished!!!", 400, 200);
 
   fill(19, 79, 92);
   rect(350, 300, 100, 40, 5);
@@ -580,7 +580,7 @@ function drawCorrectScreenCount3() {
   fill(0, 128, 0);
   textSize(36);
   textAlign(CENTER, CENTER);
-  text("CORRECT!!!", 400, 200);
+  text("Congratulations - you finished!!!", 400, 200);
 
   fill(19, 79, 92);
   rect(350, 300, 100, 40, 5);
@@ -626,13 +626,13 @@ function drawButtons() {
   fill(255, 255, 0);
   textSize(18);
   textAlign(CENTER, CENTER);
-  text("Click on the big button", 400, 320);
+  text("Click on the largest button", 400, 320);
 
 
   // Home Button
   textSize(50);
   textAlign(CENTER, CENTER);
-  text("🏠", 100, 500);
+  text("🏠", 50, 560); 
 }
 
 
@@ -673,13 +673,13 @@ function drawButton2() {
   fill(255, 255, 0);
   textSize(18);
   textAlign(CENTER, CENTER);
-  text("Click on the small button", 400, 320);
+  text("Click on the smallest button", 400, 320);
 
 
   // Home Button
-  textSize(32);
+  textSize(50);
   textAlign(CENTER, CENTER);
-  text("🏠", 50, 560);
+  text("🏠", 50, 560); 
 }
 
 // Button Exercise L3
@@ -728,7 +728,7 @@ let blueButtonRadius = 15; // Radius of the blue button (half of the width/heigh
   fill(255, 255, 0);
   textSize(18);
   textAlign(CENTER, CENTER);
-  text("Click on the small button", 400, 320);
+  text("Click on the smallest button", 400, 320);
 
   // Home Button
   textSize(32);
@@ -793,7 +793,7 @@ function drawCorrectScreenButton3() {
   fill(0, 128, 0);
   textSize(36);
   textAlign(CENTER, CENTER);
-  text("CORRECT!!!", 400, 200);
+  text("Congratulations - you finished!!!", 400, 200);
 
   fill(19, 79, 92);
   rect(350, 300, 100, 40, 5);
@@ -993,6 +993,10 @@ if (currentCanvas === 'incorrect_match' && mouseX > 350 && mouseX < 470 && mouse
 function setCanvas(newCanvas) {
   previousCanvas = currentCanvas;
   currentCanvas = newCanvas;
+}
+
+function draw() {
+  drawProgressBar();
 }
 
 function drawProgressBar() {
