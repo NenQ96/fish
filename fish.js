@@ -608,17 +608,21 @@ function drawButtons() {
   textSize(24);
   text("LEVEL 1 - EASY", 400, 45);
   
-  let smallerButtonX = 200;
+  let smallerButtonX = 500; 
   let smallerButtonY = 200;
-  let smallerButtonRadius = 100; // Radius for the smaller button
-
-  // Draw the larger red button
-  fill(255, 0, 0);
-  ellipse(550, 200, 100, 100); // smaller button
+  let smallerButtonRadius = 50; 
+  
+  let largerButtonX = 200;
+  let largerButtonY = 200;
+  let largerButtonRadius = 100; // Radius for the smaller button
 
   // Draw the smaller red button
   fill(255, 0, 0);
-  ellipse(smallerButtonX, smallerButtonY, 200, 200); // larger button
+  ellipse(smallerButtonX, smallerButtonY, 100, 100); // smaller button
+
+  // Draw the smaller red button
+  fill(255, 0, 0);
+  ellipse(largerButtonX, largerButtonY, 200, 200); // larger button
   
   // Prompt
   fill(19, 79, 92);
@@ -888,6 +892,11 @@ function mousePressed() {
   if (currentCanvas === 'button' && d < 100) { // Check if click is inside the smaller button
     drawCorrectScreenButton1(); // Call the correct screen
     progress = Math.min(progress + 10, 100); // Update progress
+  }
+  
+  let d5 = dist(mouseX, mouseY, 500, 200);
+  if (currentCanvas === 'button' && d5 < 50) {
+    drawIncorrectScreen(); // Call the incorrect screen function when smaller button is clicked
   }
   
   let d2 = dist(mouseX, mouseY, 550, 200); // Checking if click is on the yellow button
